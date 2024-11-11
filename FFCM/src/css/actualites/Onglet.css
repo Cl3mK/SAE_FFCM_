@@ -1,0 +1,55 @@
+.onglet_container {
+    position: relative; /* Position relative pour le conteneur */
+    overflow: hidden; /* Évite le débordement du conteneur */
+}
+
+.onglet_titles {
+    list-style: none;
+    display: flex; /* Utiliser flexbox pour un espacement égal */
+    align-items: center;
+    justify-content: space-between; /* Espacement égal entre les onglets */
+    background-color: #E5E5EA;
+    padding: 10px; /* Réduit le padding pour éviter les débordements */
+    border-radius: 25px;
+    position: relative;
+    width: 100%; /* Assurez-vous que le conteneur utilise toute la largeur disponible */
+}
+
+.onglet_titles li {
+    padding: 10px;
+    flex: 1; /* Chaque onglet occupe un espace égal */
+    text-align: center;
+    font-size: 32px;
+    color: #333298;
+    opacity: 0.4;
+    transition: opacity 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    z-index: 1; /* Assure que le texte est au-dessus de la barre d'animation */
+}
+
+.onglet_titles li.active {
+    opacity: 1; /* Onglet actif complètement opaque */
+}
+
+.onglet_titles li:hover {
+    opacity: 1; /* Opacité complète lors du survol */
+}
+
+/* Style de la barre d'animation */
+.active-tab {
+    content: '';
+    position: absolute; /* Position absolue par rapport à l'onglet */
+    height: 70%; /* S'étend sur toute la hauteur de l'onglet */
+    background-color: white; /* Couleur de fond de la barre */
+    border-radius: 15px; /* Coins arrondis */
+    transition: transform 0.3s ease; /* Animation douce pour le déplacement */
+    z-index: 0; /* Derrière les onglets */
+    top: 15%; /* Ajustement pour centrer verticalement sous les onglets */
+}
+
+@media (max-width: 430px) {
+    .onglet_titles li {
+        font-size: 20px;
+    }
+}

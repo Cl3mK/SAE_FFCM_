@@ -1,0 +1,22 @@
+.button_stay_container {
+    padding: 10px 30px;
+    color: white;
+    background-color: #333298;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    font-size: 12px;
+    position: sticky;
+    z-index: 5;
+    bottom: 10px;
+    margin-bottom: 10px;
+    margin-top: -15px;
+}
+
+.button_stay_container:hover {
+    color: #333298;
+    background-color: white;
+    box-shadow: inset 0px 0px 0px 3px #333298;
+    box-sizing: border-box;
+}

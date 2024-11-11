@@ -1,0 +1,28 @@
+.annonce_container {
+    padding: 5%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.annonce_title h1 {
+    font-size: 64px;
+    color:#333298;
+}
+
+.annonce_cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px; /* Espacement entre les cartes */
+}
+
+@media (max-width: 430px) {
+    .annonce_title h1 {
+        font-size: 35px;
+    }
+
+    .annonce_cards {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}

@@ -1,0 +1,163 @@
+.ressources_container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 5%;
+    padding-bottom: 0;
+}
+
+.ressources_title h1 {
+    font-size: 64px;
+    color: #333298;
+}
+
+.ressources_main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:30px;
+    gap: 20px;
+}
+
+.nav_column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+}
+
+.nav_column::after {
+    content: '';
+    position: absolute;
+    height: 240px; /* Make it the full width of the column */
+    width: 5px; /* Adjust the height of the line */
+    margin-left: 37px;
+    background-color: #28AFBF; /* Color of the line */
+    z-index: 1; /* Ensure it is behind the icons */
+}
+
+.nav_item {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.ressource_label {
+    color: #28AFBF;
+    font-size: 32px;
+    font-family: 'SF Pro Display';
+    opacity: 40%;
+}
+
+.ressource_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 80px;
+    color: #28AFBF;
+    background-color: white;
+    padding: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #28AFBF;
+    font-size: 24px;
+    border-radius: 50%;
+    transition: all 0.3s ease 0s;
+    flex-shrink: 0;
+}
+
+.nav_item:hover .ressource_icon {
+    transform: scale(1.2);
+}
+
+.nav_item:hover .ressource_label {
+    opacity: 100%;
+}
+
+.nav_item.active .ressource_icon {
+    color: white;
+    background-color: #28AFBF;
+}
+
+.nav_item.active .ressource_label {
+    opacity: 100%;
+}
+
+.nav_item.active:hover .ressource_icon {
+    transform: scale(1);
+}
+
+.content_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #28AFBF;
+    border-radius: 25px;
+    gap:10px;
+    min-height: 300px;
+    min-width: 485px;
+}
+
+.content_container h3 {
+    color: #333298;
+    font-size: 24px;
+    font-family: 'SF Pro Display';
+    text-align: center;
+}
+
+.content_container button {
+    color: white;
+    font-size: 16px;
+    background-color: #333298;
+    padding: 5px 15px;
+    border:none;
+    border-radius: 25px;
+    transition: all 0.3s ease 0s;
+    display: flex;
+    gap: 10px;
+}
+
+.content_container button:hover {
+    color: #333298;
+    background-color: white;
+    box-shadow: inset 0px 0px 0px 3px #333298;
+    box-sizing: border-box;
+}
+
+@media (max-width: 820px) {
+    .content_container {
+        min-width: 350px;
+        min-height: 380px;
+    }
+}
+
+@media (max-width: 430px) {
+    .ressources_main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ressources_title h1 {
+        font-size: 35px;
+    }
+
+    .content_container h3 {
+        font-size: 16px;
+    }
+
+    .content_container {
+        min-width: 300px;
+        min-height: 250px;
+    }
+
+    .ressource_label {
+        font-size: 24px;
+    }
+}

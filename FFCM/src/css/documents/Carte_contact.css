@@ -1,0 +1,88 @@
+.carte_contact_container {
+    background-color: #AFDDE2;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    border-radius: 25px;
+    padding: 30px;
+    width: 300px;
+}
+
+.carte_contact_title {
+    display: flex;
+    align-items: center;
+    gap:10px;
+    min-height: 50px;
+}
+
+.icon_user {
+    color: #333298;
+    font-size: 30px;
+}
+
+.name {
+    font-size: 24px;
+    color: #333298;
+}
+
+.carte_contact_role {
+    font-size: 16px;
+    color: #333298;
+    min-height: 110px;
+    display: flex;
+    align-items: center;
+}
+
+.contact_info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #28AFBF;
+    padding: 15px;
+    margin-left: -30px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 0 3px 10px #757575;
+}
+
+.contact_item {
+    display: flex;
+    gap: 20px;
+    margin-left: 20px;
+    color:white;
+}
+
+@media (max-width: 430px) {
+    .carte_contact_container {
+        gap: 10px;
+        padding: 15px;
+        padding-bottom: 20px;
+        width: 275px;
+    }
+
+    .carte_contact_title {
+        min-height: 0;
+    }
+
+    .name {
+        font-size: 16px;
+    }
+
+    .icon_user {
+        font-size: 16px;
+    }
+
+    .carte_contact_role {
+        font-size: 12px;
+        min-height: 0;
+    }
+
+    .contact_info {
+        margin-left: -15px;
+        padding: 10px;
+    }
+
+    .contact_item span, .item_icon {
+        font-size: 12px;
+    }
+}

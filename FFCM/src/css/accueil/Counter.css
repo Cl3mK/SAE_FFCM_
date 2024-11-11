@@ -1,0 +1,48 @@
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle {
+  position: relative;
+  width: 160px;
+  height: 160px;
+}
+
+.progress-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-90deg);
+}
+
+.background-circle {
+  fill: none;
+  stroke: #E5E5EA;
+  stroke-width: 10;
+}
+
+.progress-ring {
+  fill: none;
+  stroke: #333298;
+  stroke-width: 10;
+  stroke-linecap: round;
+}
+
+.number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  color: #333298;
+}
+
+.label {
+  font-size: 18px;
+  color: #333298;
+  margin-top: 10px;
+  text-align: center;
+} 

@@ -1,0 +1,34 @@
+.elem_accordion_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid;
+    border-color: #333298;
+    border-radius: 25px;
+    transition: all 0.3s ease 0s;
+}
+
+.elem_accordion_text {
+    padding: 20px;
+    color: #333298;
+    font-size: 16px;
+}
+
+.elem_accordion_container:hover {
+    background-color: #333298;
+}
+
+.elem_accordion_container:hover .elem_accordion_text{
+    color: white;
+}
+
+@media (max-width: 430px) {
+    .elem_accordion_text {
+        font-size: 12px;
+    }
+
+    .elem_accordion_container {
+        height: 70px;
+        width: 130px;
+    }
+}

@@ -1,0 +1,34 @@
+.landing_container {
+    display: flex;
+    justify-content: center;
+}
+
+.landing_title {
+    width: 90%;
+    padding: 64px;
+    background-image: url('@images/eau.png');
+    border-radius: 25px;
+}
+
+.landing_title h1 {
+    font-size: 55px;
+    color: white;
+}
+
+.landing_title h2 {
+    font-size: 24px;
+    color: #333298;
+}
+
+@media (max-width: 430px) {
+    .landing_title {
+        padding: 30px;
+    }
+    .landing_title h1 {
+        font-size: 35px;
+    }
+
+    .landing_title h2 {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,83 @@
+.article_title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    height:75px;
+    background-color: #AFDDE2;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    box-shadow: 0 5px 10px -5px #757575;
+    position: relative;
+    z-index: 2;
+}
+
+.article_title h1 {
+    font-family: 'SF Pro Display';
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.article_title_end {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.article_title_end h2 {
+    font-family: 'SF Pro Display';
+}
+
+.article_chevron {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #28AFBF;
+    border-radius: 50%;
+    height:5px;
+    width:5px;
+    padding: 20px;
+    background-color: transparent;
+    transition: all 0.3s ease 0s;
+}
+
+.article_content {
+    padding: 20px;
+    background-color: #E5E5EA;
+    height:200px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
+.article_content::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(to bottom, #E5E5EA00, #E5E5EAFF);
+    pointer-events: none;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.article_content h3 {
+    font-family: 'SF Pro Display';
+}
+
+.article_container {
+    cursor: pointer;
+}
+
+.article_container:hover .article_chevron {
+    transform: scale(1.2);
+    color: white;
+    background-color: #28AFBF;
+}

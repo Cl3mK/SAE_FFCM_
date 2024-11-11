@@ -1,0 +1,28 @@
+.anchors_container {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    padding-bottom: 0;
+}
+
+.anchors_container ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 100%; 
+    padding: 0;
+    margin: 0;
+}
+
+.anchors_container li {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 430px) {
+    .anchors_container {
+        padding: 0;
+        padding-top: 30px;
+    }
+}

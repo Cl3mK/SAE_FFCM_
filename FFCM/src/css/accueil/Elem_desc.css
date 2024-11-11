@@ -1,0 +1,66 @@
+.elem_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    background-color: #28AFBF;
+    height: 180px;
+    padding: 0 15px;
+    padding-top: 20px;
+    border-radius: 25px;
+    font-family: 'SF Pro Display';
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 80px;
+    background-color: #AFDDE2;
+    color: #333298;
+    padding: 10px;
+    border-radius: 50%;
+    margin-bottom: -40px;
+    z-index:2;
+    box-shadow: 0 3px 10px #757575;
+    transition: all 0.3s ease 0s;
+}
+
+.elem_container:hover .icon {
+    transform: scale(1.2);
+}
+
+.even .text {
+    background-color: #AFDDE2;
+    color: #333298;
+}
+
+.even .icon {
+    background-color: #28AFBF;
+    color: white;
+}
+
+.odd .text {
+    background-color: #28AFBF;
+    color: white;
+}
+
+.odd .icon {
+    background-color: #AFDDE2;
+    color: #333298;
+}
+
+@media (max-width: 430px) {
+    .text {
+        font-size: 12px;
+    }
+  }

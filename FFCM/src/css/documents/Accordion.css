@@ -1,0 +1,123 @@
+.accordion_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.accordion_item {
+    width: 100%;
+    border: 3px solid;
+    border-color: #AFDDE2;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.accordion_title {
+    color: #333298;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.accordion_title h1 {
+    font-size: 32px;
+}
+
+.accordion_content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    color: #333298;
+    font-size: 16px;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.accordion_content.active {
+    max-height: 500px;
+    opacity: 1;
+    margin-top: 10px;
+}
+
+.accordion_item:nth-of-type(1) .accordion_content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "top1 top2"
+        "left map";
+}
+
+.articles-top1 {
+    grid-area: top1;
+}
+
+.articles-top2 {
+    grid-area: top2;
+}
+
+.articles-left {
+    grid-area: left;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.container_map {
+    grid-area: map;
+    align-self: start;
+    justify-self: center;
+}
+
+.map_cure {
+    height: 370px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.accordion_item:nth-of-type(5) .accordion_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.accordion_contact {
+    display: flex;
+    gap: 30px;
+}
+
+.accordion_item:nth-of-type(5) .active{
+    min-height: 420px;
+}
+
+@media (max-width: 430px) {
+    .map_cure {
+        height: 200px;
+    }
+
+    .accordion_item:nth-of-type(1) .accordion_content{
+        grid-template-areas: 
+            "top1 top2"
+            "left left"
+            "map map";
+    }
+
+    .articles-left {
+        grid-area: left;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .accordion_contact {
+        flex-direction: column;
+    }
+
+    .accordion_contact {
+        gap: 10px
+    }
+}
