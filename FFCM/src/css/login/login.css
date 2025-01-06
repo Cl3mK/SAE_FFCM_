@@ -1,0 +1,96 @@
+.connect_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 10%;
+}
+
+.login_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #AFDDE2;
+    border-radius: 50px;
+    box-shadow: 0 3px 10px #757575;
+    padding: 30px;
+    gap: 20px;
+    width: 700px;
+}
+
+.connect_title h1 {
+    font-size: 64px;
+    color: #333298;
+}
+
+.input_group input {
+    font-family: 'SF Pro Display';
+    color: #757575;
+    width: 100%;
+    height: 30px;
+    padding: 0 10px;
+    border: 3px solid #333298;
+    outline: none;
+    border-radius: 25px;
+}
+
+.input_group {
+    width: 80%;
+}
+
+.input_wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+.input_icon {
+    height: 30px;
+    width: 30px;
+    color:#333298;
+}
+
+.login_options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.login_options a {
+    color: #333298;
+    font-weight: bold;
+}
+
+.signup_link a {
+    color: #333298;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup_link p {
+    font-family: 'SF Pro Display';
+}
+
+.login_button a {
+    font-family: 'Octarine';
+}
+
+.login_button {
+    color: white;
+    background-color: #333298;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    transition: all 0.3s ease 0s;
+}
+
+.login_button:hover {
+    color: #333298;
+    background-color: white;
+    box-shadow: inset 0px 0px 0px 3px #333298;
+    box-sizing: border-box;
+}
+
+.login_button:hover a {
+    color: #333298;
+}

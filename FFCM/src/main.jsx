@@ -7,6 +7,8 @@ import Documents from '@layout/documents.jsx';
 import Actualites from '@layout/actualites.jsx';
 import Annonceurs from '@layout/annonceurs.jsx';
 import Adherer from '@layout/adherer.jsx';
+import Login from '@layout/login.jsx';
+import Survey from '@layout/survey.jsx';
 
 const router = createBrowserRouter([
   {
@@ -33,6 +35,14 @@ const router = createBrowserRouter([
         path: '/adherer',
         element: <Adherer />,
       },
+      {
+        path: '/login',
+        element: <Login />,
+      },
+      {
+        path: '/survey',
+        element: <Survey />
+      }
     ],
   },
 ]);

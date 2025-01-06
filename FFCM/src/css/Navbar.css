@@ -70,6 +70,10 @@ nav {
     opacity: 100%;
 }
 
+.adherer_button a {
+    font-family: 'Octarine';
+}
+
 .adherer_button {
     grid-area: adherer;
     padding: 5px;
@@ -79,6 +83,10 @@ nav {
     border-radius: 25px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
+}
+
+.adherer_button:hover a {
+    color: #333298;
 }
 
 .adherer_button:hover {
