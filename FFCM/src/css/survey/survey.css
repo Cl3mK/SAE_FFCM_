@@ -1,11 +1,11 @@
-.connect_container {
+.survey_container {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 5% 10%;
 }
 
-.login_container {
+.survey_form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,14 +19,15 @@
 }
 
 .connect_title h1 {
-    font-size: 64px;
+    text-align: center;
+    font-size: 32px;
     color: #333298;
 }
 
-.input_group input {
+.survey_form input, .survey_form select {
     font-family: 'SF Pro Display';
     color: #757575;
-    width: 100%;
+    width: 70%;
     height: 30px;
     padding: 0 10px;
     border: none;
@@ -34,48 +35,48 @@
     border-radius: 25px;
 }
 
+.input_group label {
+    flex: 1;
+}
+
 .input_group {
     width: 80%;
-}
-
-.input_wrapper {
     display: flex;
-    gap: 20px;
-}
-
-.input_icon {
-    height: 30px;
-    width: 30px;
-    color:#333298;
-}
-
-.login_options {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+}
+
+.select_group {
     width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
 }
 
-.login_options a {
-    color: #333298;
-    font-weight: bold;
+.checkbox_group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.signup_link a {
-    color: #333298;
-    text-decoration: none;
-    font-weight: bold;
+.checkbox_group input[type="checkbox"] {
+    margin-left: -155px;
+    flex-shrink: 0;
 }
 
-.signup_link p {
-    font-family: 'SF Pro Display';
+.checkbox_group input[type="text"] {
+    margin-left: auto;
 }
 
-.login_button a {
+.checkbox_group label {
+    margin-left: -140px;
+}
+.submit_button a {
     font-family: 'Octarine';
 }
 
-.login_button {
+.submit_button {
     color: white;
     background-color: #333298;
     padding: 10px 20px;
@@ -84,13 +85,13 @@
     transition: all 0.3s ease 0s;
 }
 
-.login_button:hover {
+.submit_button:hover {
     color: #333298;
     background-color: #AFDDE2;
     box-shadow: inset 0px 0px 0px 3px #333298;
     box-sizing: border-box;
 }
 
-.login_button:hover a {
+.submit_button:hover a {
     color: #333298;
 }

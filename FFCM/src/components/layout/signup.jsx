@@ -5,13 +5,13 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
 
-const Login = () => {
+const Signup = () => {
     return (
         <div className='connect_container'>
-            <form action="../../php/signin.php" method="post">
+            <form action="../../php/signup.php" method="post">
                 <div className='login_container'>
                     <div className='connect_title'>
-                        <h1>Se connecter</h1>
+                        <h1>S'inscrire</h1>
                     </div>
 
                     <div className="input_group">
@@ -22,7 +22,6 @@ const Login = () => {
                                 type="email"
                                 id="email"
                                 placeholder="Entrez votre adresse e-mail"
-                                required
                             />
                         </div>
                     </div>
@@ -35,7 +34,6 @@ const Login = () => {
                                 type="password"
                                 id="password"
                                 placeholder="Entrez votre mot de passe"
-                                required
                             />
                         </div>
                     </div>
@@ -45,13 +43,12 @@ const Login = () => {
                             <input type="checkbox"/>
                             Se souvenir de moi
                         </label>
-                        <p><a href="#">Mot de passe oublié ?</a></p>
                     </div>
 
-                    <button type="submit" className="login_button"><Link to="/survey">Se connecter</Link></button>
+                    <button type="submit" className="login_button"><Link to="/survey">S'inscrire</Link></button>
 
                     <div className="signup_link">
-                        <p>Pas encore inscrit ? <a href="/signup">S'inscrire</a></p>
+                        <p>Déjà inscrit ? <a href="/login">Se connecter</a></p>
                     </div>
                 </div>
             </form>
@@ -59,4 +56,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Signup;
