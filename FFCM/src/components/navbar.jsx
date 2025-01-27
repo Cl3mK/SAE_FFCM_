@@ -19,15 +19,11 @@ const Navbar = () => {
     const location = useLocation();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeIndex, setActiveIndex] = useState(0);
-    const [isLoginClicked, setIsLoginClicked] = useState(false);
 
 
     useEffect(() => {
         const paths = ['/', '/documents', '/actualites', '/annonceurs'];
         setActiveIndex(paths.indexOf(location.pathname));
-        if (location.pathname !== '/login') {
-            setIsLoginClicked(false);
-        }
     }, [location]);
 
     const closeMenu = () => {
@@ -37,6 +33,9 @@ const Navbar = () => {
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
+
+    const transparentPages = ['/login', '/signup', '/admin', '/survey'];
+    const isTransparent = transparentPages.includes(location.pathname);
 
     const handleLoginClick = () => {
         setIsLoginClicked(true);
@@ -71,7 +70,7 @@ const Navbar = () => {
                     style={{
                         left: `calc(${(2 + activeIndex * 2) * (100 / 11)}% + 10px)`,
                         width: `calc(${(2*100) / 11}% - 15px)`,
-                        backgroundColor: isLoginClicked ? 'transparent' : '#333298',
+                        backgroundColor: isTransparent ? 'transparent' : '#333298',
                     }}
                 ></div>
             </nav>

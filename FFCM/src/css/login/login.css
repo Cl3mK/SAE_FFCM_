@@ -23,7 +23,7 @@
     color: #333298;
 }
 
-.input_group input {
+.input_group1 input {
     font-family: 'SF Pro Display';
     color: #757575;
     width: 100%;
@@ -34,7 +34,7 @@
     border-radius: 25px;
 }
 
-.input_group {
+.input_group1 {
     width: 80%;
 }
 

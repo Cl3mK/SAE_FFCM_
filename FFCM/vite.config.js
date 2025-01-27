@@ -8,16 +8,16 @@ export default defineConfig({
   resolve: {
     alias: [
       {
-      find: '@',
-      replacement: path.resolve(__dirname, 'src')
+        find: '@',
+        replacement: path.resolve(__dirname, 'src')
       },
       {
-      find: '@components',
-      replacement: path.resolve(__dirname, 'src/components')
+        find: '@components',
+        replacement: path.resolve(__dirname, 'src/components')
       },
       {
-      find: '@layout',
-      replacement: path.resolve(__dirname, 'src/components/layout')
+        find: '@layout',
+        replacement: path.resolve(__dirname, 'src/components/layout')
       },
       {
         find: '@css',
@@ -32,5 +32,14 @@ export default defineConfig({
         replacement: path.resolve(__dirname, 'src/assets')
       }
     ]
+  },
+  server: {
+    proxy: {
+      '/php': {
+        target: 'http://localhost:8000',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/php/, '/FFCM/src/php')
+      }
+    }
   }
 })

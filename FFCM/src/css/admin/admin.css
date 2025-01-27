@@ -1,0 +1,97 @@
+.admin-container {
+  padding: 20px;
+}
+.toggle-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 30px;
+}
+.toggle-button {
+  color: #333298;
+  background-color: white;
+  padding: 10px 20px;
+  border:none;
+  box-shadow: inset 0px 0px 0px 3px #333298;
+  box-sizing: border-box;
+  border-radius: 25px;
+  transition: all 0.3s ease 0s;
+}
+
+.toggle-button:hover {
+  color: white;
+  background-color: #333298;
+}
+.toggle-button.active {
+  background-color: #333298;
+  color: white
+}
+.chart-container {
+  margin-bottom: 30px;
+}
+
+.admin-container h2 {
+  font-size: 64px;
+  color: #333298;
+  text-align: center;
+}
+
+.admin-container table {
+  border-spacing: 0; /* Supprime les espaces entre les cellules */
+  border-collapse: collapse; /* Fusionne les bordures */
+  width: 100%; /* Prend toute la largeur disponible */
+}
+
+.admin-container th {
+  font-family: 'SF Pro Display';
+  font-weight: bold;
+  text-align: left; /* Alignement à gauche des en-têtes */
+  padding: 10px 15px; /* Ajoute de l'espace autour du texte */
+  background-color: #F2F2F2; /* Couleur de fond pour distinguer les en-têtes */
+  border-bottom: 2px solid #333298; /* Ligne de séparation en dessous de l'en-tête */
+}
+
+.admin-container td {
+  padding: 10px 15px; /* Ajoute de l'espace autour du texte */
+  border-bottom: 1px solid #E0E0E0; /* Ligne de séparation entre les lignes */
+  color: #333; /* Couleur du texte */
+}
+
+.admin-container tr:last-child td {
+  border-bottom: none; /* Supprime la bordure de la dernière ligne */
+}
+
+.admin-container table tr:hover {
+  background-color: #FAFAFA; /* Met en surbrillance une ligne lorsqu'on passe dessus */
+}
+
+
+.charts {
+  display: grid; /* Utilise une grille pour organiser les graphiques */
+  grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
+}
+
+.chart-container {
+  display: flex; /* Centre le contenu du graphique */
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  width: 100%; /* S'adapte à la colonne */
+}
+
+.chart-container canvas {
+  max-width: 350px; /* Limite la largeur maximale du graphique */
+  max-height: 350px; /* Limite la hauteur maximale pour garder les proportions */
+  width: auto; /* Garde les proportions */
+  height: auto; /* Garde les proportions */
+}
+
+th.sorted {
+  background-color: #333298 !important; /* Couleur de fond pour montrer la colonne triée */
+  color: white; /* Couleur du texte pour contraster */
+  transition: background-color 0.3s ease; /* Animation pour un effet doux */
+}
+
+th:hover {
+  background-color: #AFDDE2; /* Couleur de fond pour montrer la colonne triée */
+  transition: background-color 0.3s ease;
+}

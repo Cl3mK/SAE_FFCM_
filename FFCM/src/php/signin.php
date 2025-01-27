@@ -1,21 +1,49 @@
 <?php
-require 'debug.php';
-require 'identity.php';
+require 'config.php';
+session_start();
 
-$trousseau = "bdd/users.bd";
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $email = $_POST['email'] ?? '';
+    $password = $_POST['password'] ?? '';
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    debugForm($_POST, 'post');
-    if(checkAccount($trousseau, $_POST) == 2){
-        echo "Coucou monsieur l'admin.";
+    try {
+        
+        $stmt = $pdo->prepare("SELECT * FROM users WHERE email = :email");
+        $stmt->bindParam(':email', $email);
+        $stmt->execute();
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($user && password_verify($password, $user['password'])) {
+            
+            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['is_admin'] = (bool)$user['is_admin'];
+
+            if ($_SESSION['is_admin']) {
+                
+                header("Location: http://localhost:5173/admin");
+            } else {
+                
+                $surveyStmt = $pdo->prepare("SELECT * FROM survey_data WHERE user_id = :user_id");
+                $surveyStmt->bindParam(':user_id', $_SESSION['user_id']);
+                $surveyStmt->execute();
+                $surveyData = $surveyStmt->fetch(PDO::FETCH_ASSOC);
+
+                if ($surveyData) {
+                    
+                    header("Location: http://localhost:5173/update-survey");
+                } else {
+                    
+                    header("Location: http://localhost:5173/survey");
+                }
+            }
+            exit();
+        } else {
+            echo "<script>alert('Adresse e-mail ou mot de passe incorrect.'); window.history.back();</script>";
+        }
+    } catch (PDOException $e) {
+        die("Erreur lors de la connexion : " . $e->getMessage());
     }
-    elseif(checkAccount($trousseau, $_POST) == 1) {
-        echo "Coucou monsieur normal.";
-    }
-    else{
-        echo "coucou à toi inconnu mais tu rentres pas par contre.";
-    }
+} else {
+    echo "Méthode non autorisée.";
 }
-else {
-    echo "Pas de données disponibles";
-}
+?>

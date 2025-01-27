@@ -30,10 +30,29 @@ function Survey() {
     });
   };
 
-  const handleSubmit = (e) => {
+const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
-  };
+
+    try {
+        const response = await fetch('/php/submit_survey.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData), // Envoi des données du formulaire
+        });
+
+        const result = await response.json();
+        if (result.status === 'success') {
+            alert('Données enregistrées avec succès.');
+        } else {
+            alert(`Erreur : ${result.message}`);
+        }
+    } catch (error) {
+        console.error('Erreur lors de l\'enregistrement des données :', error);
+        alert('Une erreur s\'est produite. Veuillez réessayer.');
+    }
+};
 
   return (
     <div className="survey_container">

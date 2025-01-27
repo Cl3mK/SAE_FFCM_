@@ -10,6 +10,8 @@ import Adherer from '@layout/adherer.jsx';
 import Login from '@layout/login.jsx';
 import Signup from '@layout/signup.jsx';
 import Survey from '@layout/survey.jsx';
+import UpdateSurvey from '@layout/updateSurvey.jsx'; 
+import Admin from '@layout/admin.jsx'; 
 
 const router = createBrowserRouter([
   {
@@ -46,8 +48,16 @@ const router = createBrowserRouter([
       },
       {
         path: '/survey',
-        element: <Survey />
-      }
+        element: <Survey />,
+      },
+      {
+        path: '/update-survey', 
+        element: <UpdateSurvey />,
+      },
+      {
+        path: '/admin', 
+        element: <Admin />,
+      },
     ],
   },
 ]);
